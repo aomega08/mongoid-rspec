@@ -22,7 +22,7 @@ module Mongoid
             if !@options.nil? && !@options.empty?
               @options.each do |option, option_value|
                 if denormalising_options(@klass.index_options[@index_fields])[option] != option_value
-                  @errors.push "index for #{@index_fields.inspect} with options of #{@klass.index_options[@index_fields].inspect}"
+                  @errors.push "index for #{@index_fields.inspect} with options of #{index_options.inspect}"
                 end
               end
             end

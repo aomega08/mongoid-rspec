@@ -3,16 +3,16 @@ $:.push File.expand_path("../lib", __FILE__)
 require "mongoid-rspec/version"
 
 Gem::Specification.new do |s|
-  s.name        = "mongoid-rspec"
+  s.name        = "mongoid4-rspec"
   s.version     = Mongoid::Rspec::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Evan Sagge"]
-  s.email       = %q{evansagge@gmail.com}
+  s.authors     = ["Francesco Boffa", "Evan Sagge"]
+  s.email       = %q{fra.boffa@gmail.com evansagge@gmail.com}
   s.homepage    = %q{http://github.com/evansagge/mongoid-rspec}
-  s.summary     = %q{RSpec matchers for Mongoid}
-  s.description = %q{RSpec matches for Mongoid models, including association and validation matchers}
+  s.summary     = %q{RSpec matchers for Mongoid 4}
+  s.description = %q{RSpec matches for Mongoid 4 models, including association and validation matchers}
 
-  s.rubyforge_project = "mongoid-rspec"
+  s.rubyforge_project = "mongoid4-rspec"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
@@ -20,6 +20,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency 'rake'
-  s.add_dependency 'mongoid', '~> 3.1.6'
+  s.add_dependency 'mongoid', '~> 4.0.0.beta2'
   s.add_dependency 'rspec', '>= 2.14'
 end

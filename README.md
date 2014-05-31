@@ -1,19 +1,17 @@
-mongoid-rspec
+mongoid4-rspec
 =
 
-[![Build Status](https://secure.travis-ci.org/evansagge/mongoid-rspec.png?branch=master)](https://travis-ci.org/evansagge/mongoid-rspec)
+This is a fork of mongoid-rspec that you can find [here](https://github.com/evansagge/mongoid-rspec)
 
-http://rubygems.org/gems/mongoid-rspec
+RSpec matchers for Mongoid 4.x.
 
-RSpec matchers for Mongoid 3.x.
-
-For Mongoid 2.x, use [mongoid-rspec 1.4.5](http://rubygems.org/gems/mongoid-rspec/versions/1.4.5)
+For Mongoid 3.x, use [mongoid-rspec](http://rubygems.org/gems/mongoid-rspec)
 
 Installation
 -
 Add to your Gemfile
 
-    gem 'mongoid-rspec'
+    gem 'mongoid4-rspec'
 
 Drop in existing or dedicated support file in spec/support (spec/support/mongoid.rb)
 
@@ -186,9 +184,9 @@ describe Log do
 end
 
 describe Article do
-  it { should have_field(:published).of_type(Boolean).with_default_value_of(false) }
-  it { should have_field(:allow_comments).of_type(Boolean).with_default_value_of(true) }
-  it { should_not have_field(:allow_comments).of_type(Boolean).with_default_value_of(false) }
+  it { should have_field(:published).of_type(Mongoid::Boolean).with_default_value_of(false) }
+  it { should have_field(:allow_comments).of_type(Mongoid::Boolean).with_default_value_of(true) }
+  it { should_not have_field(:allow_comments).of_type(Mongoid::Boolean).with_default_value_of(false) }
   it { should_not have_field(:number_of_comments).of_type(Integer).with_default_value_of(1) }
 end
 ```
